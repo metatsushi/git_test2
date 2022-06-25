@@ -1,5 +1,8 @@
 <?php 
-
+// セッションスタート・関数呼び出し
+session_start();
+include('function.php');
+require_once('common/header.php');
 ?>
 
 <!DOCTYPE html>
