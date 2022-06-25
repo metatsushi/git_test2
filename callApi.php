@@ -1,21 +1,16 @@
 <?php 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <?= $header ?>
     
 </head>
 <!-- APIが取得したレシピが横並びになるように簡単にスタイル当てる -->
 <style>
-* {
- font-size: 14px;
-}   
+
 
 header{
     position:fixed;
@@ -58,13 +53,12 @@ body {
 </style>
 
 <header id="category-selection">
-   
-        <select name='category' id='category'>
-            <option>カテゴリ</option>
-        </select>
-        <button id="category_set">決定</button>
-        <a class="navbar-brand" href="myRecipe.php">マイレシピ</a>
-        <a class="navbar-brand" href="logout.php">ログアウト</a>
+    <select name='category' id='category'>
+        <option>カテゴリ</option>
+    </select>
+    <button id="category_set">決定</button>
+    <a class="navbar-brand" href="myRecipe.php">マイレシピ</a>
+    <a class="navbar-brand" href="logout.php">ログアウト</a>
 </header>
 
 <body>
@@ -95,7 +89,7 @@ const rendering = (data) => {
         // レシピタイトル、作り方、URL、写真など取得したい情報をAPIで渡される配列から抽出
         const innerHtml =`
         <div class="recipe" >
-            <h3 class="recipeTitle">${data[i].recipeTitle}</h3>
+            <p class="recipeTitle">${data[i].recipeTitle}</p>
             <a href ="${data[i].recipeUrl}" target="_blank" class="image-wrap">
                 <img src="${data[i].foodImageUrl}"  class="foodImageUrl"> 
             </a> 

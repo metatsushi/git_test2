@@ -2,6 +2,7 @@
 // セッションスタート・関数呼び出し
 session_start();
 include('function.php');
+require_once('common/header.php');
 
 // ログイン確認（セッションIDがないまたは合っていない場合はEXIT） 
 loginCheck();
@@ -33,18 +34,11 @@ if($status === false) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <?= $header ?>
 </head>
 <!-- APIが取得したレシピが横並びになるように簡単にスタイル当てる -->
 <style>
-* {
- font-size: 14px;
-}    
+
 #selectRecipe {
  display: flex; 
  flex-wrap: wrap;  
@@ -152,7 +146,7 @@ Object.keys(recipeArr).forEach((key) => {
     const cookedHtml =`
             <div class="myRecipe">
                 <p class="id" style="display:none">${val.id}</p>
-                <h3 class="recipeTitle">${val.recipeTitle}</h3>
+                <p class="recipeTitle">${val.recipeTitle}</p>
                 <a href ="${val.recipeUrl}" target="_blank" class="image-wrap">
                     <img src="${val.foodImageUrl}"  class="foodImageUrl" > 
                 </a> 

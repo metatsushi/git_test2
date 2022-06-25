@@ -1,3 +1,9 @@
+<?php 
+session_start();
+require_once('common/navbar.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,14 +16,8 @@
 
 <!-- Head[Start] -->
 <header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="select.php">xxxxx</a>
-            <a class="navbar-brand" href="questionaire.php">yyyyyy</a>
-        </div>
-    </div>
-  </nav>
+<?= $nav ?>
+
 </header>
 <!-- Head[End] -->
 

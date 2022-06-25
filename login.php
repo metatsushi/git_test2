@@ -1,4 +1,7 @@
-
+<?php 
+session_start();
+require_once('common/navbar.php');
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,14 +15,7 @@
 
 <!-- Head[Start] -->
 <header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="myRecipe.php">マイレシピ</a>
-            <a class="navbar-brand" href="callApi.php">おすすめレシピ</a>
-        </div>
-    </div>
-  </nav>
+  <?= $nav ?>
 </header>
 <!-- Head[End] -->
 
