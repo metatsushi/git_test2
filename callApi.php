@@ -1,5 +1,8 @@
 <?php 
-
+// セッションスタート・関数呼び出し
+session_start();
+include('function.php');
+require_once('common/header.php');
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +60,8 @@ body {
         <option>カテゴリ</option>
     </select>
     <button id="category_set">決定</button>
-    <a class="navbar-brand" href="myRecipe.php">マイレシピ</a>
-    <a class="navbar-brand" href="logout.php">ログアウト</a>
+    <a class="navbar-light" href="myRecipe.php">マイレシピ</a>
+    <a class="navbar-light" href="logout.php">ログアウト</a>
 </header>
 
 <body>
@@ -126,7 +129,7 @@ $(document).on("click", ".addRecipe", function(){
    console.log(foodImageUrl);
    
    
-   //マイレシピ登録したいレシピをPOSTするためのフォームを作成し、ボタンをおしたLIタグのレシピ情報を挿入しPOSTで送信 
+   //マイレシピ登録したいレシピをPOSTするためのフォームを擬似作成し、ボタンをおしたLIタグのレシピ情報を挿入しPOSTで送信 
         $('form').append($('<input />', {
             type: 'hidden',
             name: 'recipeDescription',

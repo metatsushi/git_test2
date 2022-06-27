@@ -107,7 +107,7 @@ h2 {
 <body>
     <div class="header-container">
         <h2>作りたいレシピ</h2>
-        <a class="navbar-brand" href="callApi.php">おすすめレシピに戻る</a>
+        <a class="navbar-light" href="callApi.php">おすすめレシピに戻る</a>
     </div>
     <div id="selectRecipe">     
     </div>
@@ -164,7 +164,7 @@ Object.keys(recipeArr).forEach((key) => {
         const selectHtml =`
             <div class="myRecipe">
                 <p class="id" style="display:none">${val.id}</p>
-                <h3 class="recipeTitle">${val.recipeTitle}</h3>
+                <p class="recipeTitle">${val.recipeTitle}</p>
                 <a href ="${val.recipeUrl}" target="_blank" class="image-wrap">
                     <img src="${val.foodImageUrl}"  class="foodImageUrl" > 
                 </a> 

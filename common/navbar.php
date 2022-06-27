@@ -1,6 +1,6 @@
 <?php
 $nav = <<<EOM
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-light">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="myRecipe.php">マイレシピ</a>
